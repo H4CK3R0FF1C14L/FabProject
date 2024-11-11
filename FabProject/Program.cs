@@ -43,7 +43,7 @@ namespace FabProject
             Console.WriteLine($"Cookie: {_cookie}{Environment.NewLine}{Environment.NewLine}");
 
             SetHeaders();
-            await ParseAllModels();
+            await ParseAllModelsAsync();
         }
 
         private static void SetHeaders()
@@ -67,7 +67,7 @@ namespace FabProject
             //_httpClient.DefaultRequestHeaders.Add("Cookie", _cookie);
         }
 
-        private static async Task<bool> ParseAllModels()
+        private static async Task<bool> ParseAllModelsAsync()
         {
             string? url = $"{BaseUrl}/i/listings/search?currency=USD&seller=Quixel";
 
